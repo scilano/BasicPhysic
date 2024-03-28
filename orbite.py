@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#Plot l'énergie potentielle effective dans le cadre de la mécanique céleste. Donne aussi les vitesses cosmiques.
+
 G = 6.67430e-11
 MTerre = 5.972e24
 RTerre = 6.371e6   
