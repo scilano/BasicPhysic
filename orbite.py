@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 
 G = 6.67430e-11
 MTerre = 5.972e24
-RTerre = 6.371e6   
+RTerre = 6.371e6
+
 #Données (choisies au hasard par un alcoolique notoire)
 MSatelitte = 1
 C = 3e15
@@ -25,6 +26,8 @@ if rMin < RTerre:
     print(f"Le satellite est à l'intérieur de la Terre. rMin = {rMin:.2e} m")
 elif rMin < R[0] or R[-1] < rMin:
     print(f"rMin n'appartiens pas à l'intervalle de R. rMin = {rMin:.2e} m, R = [{R[0]:.0e}, {R[-1]:.0e}] m")
+    
+ 
 #Plot d'un beau graphique
 plt.axhline(y=0, color='black', linestyle='--')
 plt.plot(R, Ep_eff(R), label = 'Ep_eff')
