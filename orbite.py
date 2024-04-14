@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 #Plot l'énergie potentielle effective dans le cadre de la mécanique céleste. Donne aussi les vitesses cosmiques.
 
 G = 6.67430e-11
@@ -8,12 +9,12 @@ MTerre = 5.972e24
 RTerre = 6.371e6
 
 #Données (choisies au hasard par un alcoolique notoire)
-MSatelitte = 1
+MSatellite = 1
 C = 3e15
 
 #Energie potentielle effective
 def Ep_eff(r):
-    return -G*MTerre*MSatelitte/r + MSatelitte*C**2/(2*r**2)
+    return -G*MTerre*MSatellite/r + MSatellite*C**2/(2*r**2)
 
 R = np.logspace(6, 10, 1000)
 
