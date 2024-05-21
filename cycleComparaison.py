@@ -26,7 +26,6 @@ class Cycle:
             N = len(p)//2
             nl, = axis.plot(v,p,label=self.legend[i],linestyle=marker)
             axis.annotate("",xy=(v[N],p[N]),arrowprops=dict(arrowstyle="->"))
-            #axis.arrow(v[N],p[N],v[N+10]-v[N],p[N+10]-p[N],shape='full', lw=0, length_includes_head=True, head_width=0.01,head_length=0.05)
             l.append(nl)
         
         leg = axis.legend(handles=l,loc=d_legend[len(axis.artists)],title = self.name)
@@ -150,4 +149,3 @@ ottoCycle.addToFig(fig,ax,'--')
 
 
 fig.show()
-input()
