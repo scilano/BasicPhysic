@@ -10,7 +10,8 @@ RTerre = 6.371e6
 
 #Données (choisies au hasard par un alcoolique notoire)
 MSatellite = 1
-C = 3e15
+rMin = 1e8
+C = np.sqrt(rMin*G*MTerre)
 
 #Energie potentielle effective
 def Ep_eff(r):
@@ -18,7 +19,6 @@ def Ep_eff(r):
 
 R = np.logspace(6, 10, 1000)
 
-rMin = C**2/(G*MTerre)
 v1 = np.sqrt(G*MTerre/RTerre)
 
 print(f"Première vitesse de libération: {v1} m/s")
@@ -40,5 +40,7 @@ plt.xlabel('r (m)')
 plt.ylabel('Ep_eff (unité SI)')
 
 plt.xscale('log')
+plt.xlim(0.5*np.min([RTerre,rMin]),1.5*np.max([RTerre,rMin]))
+plt.ylim([Ep_eff(rMin),-10*Ep_eff(rMin)])
 plt.show()
     
